@@ -1,24 +1,30 @@
 {
+  "xsappname": "incident-management-app",
+  "tenant-mode": "dedicated",
   "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "uaa"
+    },
     {
       "name": "$XSAPPNAME.support",
       "description": "support"
     }
   ],
-  "attributes": [],
   "role-templates": [
     {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    },
+    {
       "name": "support",
-      "description": "generated",
+      "description": "Support User",
       "scope-references": [
         "$XSAPPNAME.support"
-      ],
-      "attribute-references": []
+      ]
     }
-  ],
-  "oauth2-configuration": {
-    "redirect-urls": [
-      "https://*.applicationstudio.cloud.sap/**"
-    ]
-  }
+  ]
 }
