@@ -520,8 +520,7 @@
     },
     "ProcessorService": {
       "@source": "srv/processor-service.cds",
-      "kind": "service",
-      "@requires": "support"
+      "kind": "service"
     },
     "ProcessorService.Incidents": {
       "kind": "entity",
